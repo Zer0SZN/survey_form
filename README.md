@@ -1,6 +1,6 @@
 # Zp SZN - Survey Form
 
-![Deployed link for the Survey Form ](https://cohortform.netlify.app/)
+[Deployed link for the Survey Form ](https://cohortform.netlify.app/)
 
 ## Welcome! 👋
 
