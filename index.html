@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="icon" href="icon.png" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Zp SZN Cohort Survey Form</h1>
+        <p class="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+      <form id="surveyForm" action="#" onsubmit="return validation()">
+        <div class="form-group">
+          <label id="nameLabel" for="name">Name </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email" id="email">Email </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label id="ageLabel" for="number"
+            >Age <span class="opt">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>Which option best describe your current role?</p>
+          <select id="dropDown" name="role" class="form-control" required>
+            <option id="clue" disabled selected value>
+              Select current role
+            </option>
+            <option id="clue" value="newbie">Newbie</option>
+            <option id="clue" value="student">Student</option>
+            <option id="clue" value="job">Full Time Job</option>
+            <option id="clue" value="preferNo">Prefer not to say</option>
+            <option id="clue" value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Would you recommend this survey to a friend?</p>
+          <label>
+            <input
+              name="userRecommend"
+              value="definitely"
+              type="radio"
+              class="inputRadio"
+              checked
+            />
+            Definitely
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="mayBe"
+              type="radio"
+              class="inputRadio"
+            />
+            Maybe
+          </label>
+          <label>
+            <input
+              name="userRecommend"
+              value="notSure"
+              type="radio"
+              class="inputRadio"
+            />
+            Not Sure
+          </label>
+        </div>
+        <div class="form-group">
+          <p>What is your favorite feature in coding?</p>
+          <select id="dropDown" name="favorite" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Project(s)</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+            <option value="other">Others</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>
+            What would you like to improve on?
+            <span class="opt">(Check all that apply)</span>
+          </p>
+          <label>
+            <input
+              name="prefer"
+              value="frontEnd"
+              type="checkbox"
+              class="inputCheckbox"
+            />
+            Frontend Projects
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="backEnd"
+              type="checkbox"
+              class="inputCheckbox"
+            />
+            Backend Projects
+          </label>
+          <label>
+            <input
+              name="Prefer"
+              value="data"
+              type="checkbox"
+              class="inputCheckbox"
+            />
+            Data Visualization
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="roadMap"
+              type="checkbox"
+              class="inputCheckbox"
+            />
+            Roadmap
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="challenges"
+              type="checkbox"
+              class="inputCheckbox"
+            />
+            Challenges
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="openSource"
+              type="checkbox"
+              class="inputCheckbox"
+            />
+            Open Source Community
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="videos"
+              type="checkbox"
+              class="inputCheckbox"
+            />
+            Videos
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="network"
+              type="checkbox"
+              class="inputCheckbox"
+            />
+            Network
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="jobs"
+              type="checkbox"
+              class="inputCheckbox"
+            />
+            Jobs
+          </label>
+          <label>
+            <input
+              name="prefer"
+              value="data"
+              type="checkbox"
+              class="inputCheckbox"
+            />
+            Additional
+            <span class="opt"
+              >(Linkedin Profile, Github, Resume, see more...)</span
+            >
+          </label>
+        </div>
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="inputTextArea"
+            name="comments"
+            placeholder="Enter your comments here..."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
